@@ -1,0 +1,132 @@
+/* =========================== 전체 컨테이너 =========================== */
+.qnaview {
+  margin: 120px auto;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 40px 60px;
+}
+
+/* =========================== 상단 제목 =========================== */
+.qnaview h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 30px;
+  border-bottom: 2px solid #6c5ce7;
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+/* =========================== 필드 공통 =========================== */
+.field {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.field label {
+  width: 120px;
+  font-weight: 600;
+  color: #555;
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+.field input[type="text"],
+.field input[type="number"],
+.field input[type="file"] {
+  flex: 1;
+  padding: 8px 12px;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  outline: none;
+}
+
+.field img {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+}
+
+.optionWrap{
+    background: #ededed;
+    padding: 30px;
+    margin: 30px 0;
+    border-radius: 10px;
+}
+
+/* =========================== 버튼 영역 =========================== */
+.btns {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  gap: 20px; /* 버튼 간 간격 */
+}
+
+.btns button {
+  background: #6c5ce7;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 24px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btns button:hover {
+  background: #5b4ad4;
+  transform: translateY(-1px);
+}
+
+/* =========================== 로딩 화면 =========================== */
+.qnaview-loading {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #777;
+  margin-top: 200px;
+}
+
+/* =========================== 이미지 미리보기 =========================== */
+.field img.preview {
+  display: block;
+  margin-top: 10px;
+  max-height: 300px;
+}
+
+
+
+/* insert페이지 */
+.writeBoard{    
+  width: 1000px;
+    margin: 200px auto 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 30px 60px 60px;
+    box-sizing: border-box;}
+
+/* =========================== 반응형 (작은 화면) =========================== */
+@media (max-width: 768px) {
+  .qnaview {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .field {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .field label {
+    margin-bottom: 6px;
+  }
+  
+}
+
+.admin_product_insert{ display: flex; flex-direction: column; }
+
+

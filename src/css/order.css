@@ -1,0 +1,135 @@
+.orderWrap_detailmy{
+  display: flex;
+}
+#orderPage {
+  color: #333;
+
+}
+.orderPage.orderDetail_my{
+  width: 77%;
+}
+
+.orderTitle {
+  font-size: 26px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #111;
+  padding-bottom: 17px;
+  color: #111;
+}
+
+.orderContainer {
+  display: flex;
+  gap: 40px;
+}
+
+/* 왼쪽 영역 */
+.orderLeft {
+  flex: 2;
+}
+
+/* 섹션 공통 */
+.sectionTitle {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #1a202c;
+}
+
+.reservationInfo {margin-top: 50px;}
+
+.reservationInfo > .reservPerInfo {display: flex;justify-content: space-between;align-items: center;}
+
+/* 테이블 스타일 */
+.infoTable, .paymentTable {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 25px;
+  font-size: 15px;
+  border-top: 1px solid #999;
+  border-bottom: 1px solid #999;
+}
+.infoTable th {line-height: 36px;}
+.infoTable th, .infoTable td,
+.paymentTable th, .paymentTable td {
+  padding: 12px 14px;
+  text-align: left;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  border-left: none;
+  border-right: none;
+}
+
+.infoTable td {font-size: 14px;}
+
+.infoTable tr:first-child th,
+.infoTable tr:first-child td,
+.paymentTable tr:first-child th,
+.paymentTable tr:first-child td {
+  border-top: 1px solid #999;
+}
+
+.infoTable tr:last-child th,
+.infoTable tr:last-child td,
+.paymentTable tr:last-child th,
+.paymentTable tr:last-child td {
+  border-bottom: 1px solid #999;
+}
+
+.infoTable th, .paymentTable th {
+  width: 140px;
+  background-color: #f7f7f7;
+  font-weight: 600;
+  color: #111;
+  text-align: center;
+}
+
+.infoTable td input {
+  width: 100%;
+  border: 1px solid #ccc;
+  padding: 8px;
+  border-radius: 4px;
+  font-size: 15px;
+}
+
+.infoTable .fontColorPoint{color:#00427a;font-weight: bold;}
+
+/* 오른쪽 결제 박스 */
+.orderRight {
+  flex: 1;
+}
+
+.paymentBox {
+  padding: 20px;
+  background-color: #f7f7f7;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+
+.paymentBox .paymentPrice {
+    text-align: right;
+    font-weight: bold;
+    font-size: 24px;
+    margin-top: 4px;
+}
+
+.payButton {
+  display: block;
+  width: 100%;
+  background-color: #2b6cb0;
+  color: white;
+  border: none;
+  padding: 14px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 6px;
+  margin-top: 15px;
+  cursor: pointer;
+}
+
+.payButton:hover {
+  background-color: #2c5282;
+}
+
+.fs_14{font-size: 14px;}
+.total_infopay{text-align: right;margin-top: 10px;font-size: 14px;}

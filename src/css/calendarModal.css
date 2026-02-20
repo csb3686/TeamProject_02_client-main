@@ -1,0 +1,438 @@
+/* =========================================================
+   📦 기본 컨테이너 및 버튼 스타일
+========================================================= */
+.calendarContainer {
+  position: relative;
+  display: inline-block;
+  font-family: "Noto Sans KR", sans-serif;
+  z-index: 1200;
+}
+
+.calendarButton {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 10px 50px;
+  background-color: #fff;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  transition: all 0.2s ease;
+}
+
+.calendarButton:hover {
+  border-color: none;
+}
+
+.calendarButtonText {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.dateText {
+  font-weight: bold;
+  color: #222;
+}
+
+.middleText {
+  margin: 0 10px;
+  color: #666;
+}
+
+.lastText {
+  margin-left: 30px;
+  color: #1a57a9
+}
+
+/* =========================================================
+   🗓️ 달력 모달 레이아웃
+========================================================= */
+.calendarModal {
+  position: absolute;
+  left: 0;
+  top:50px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  padding: 20px;
+  z-index: 9999;
+  width: 614px;
+  transition: all 0.25s ease;
+}
+
+@media (max-width: 700px) {
+  .calendarModal {
+    width: 95vw;
+    min-width: auto;
+    left: 0;
+    transform: none;
+  }
+}
+
+/* =========================================================
+   🆕 singleModal 전용 전체화면 모달
+========================================================= */
+.singleModalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1200;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.singleModalBox {
+  width: 640px;
+  max-width: 100%;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.singleModalHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 18px;
+  font-weight: 700;
+  color: #222;
+}
+
+.singleModalClose {
+  border: none;
+  background: transparent;
+  font-size: 20px;
+  cursor: pointer;
+  color: #888;
+}
+
+.singleModalClose:hover {
+  color: #333;
+}
+
+.singleModalApply {
+  margin-top: 8px;
+}
+
+.singleModalBox .calendarBody {
+  max-height: 420px;
+  overflow: auto;
+}
+
+/* =========================================================
+   🆕 rangeModal 전용 전체화면 모달
+========================================================= */
+.rangeModalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1200;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.rangeModalBox {
+  width: 680px;
+  max-width: 100%;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.rangeModalHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 18px;
+  font-weight: 700;
+  color: #222;
+}
+
+.rangeModalApply {
+  margin-top: 8px;
+}
+
+.rangeModalBox .calendarBody {
+  max-height: 440px;
+  overflow: auto;
+}
+
+
+/* 아래/위로 열리는 애니메이션 */
+/* .calendarModal.openDown {
+  top: calc(100% + 8px);
+  animation: slideDown 0.25s ease;
+  z-index: 9999;
+}
+
+.calendarModal.openUp {
+  bottom: calc(100% + 8px);
+  animation: slideUp 0.25s ease;
+
+} */
+
+
+/* @keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+} */
+
+/* =========================================================
+   📅 react-datepicker 기본 스타일 커스터마이징
+========================================================= */
+.react-datepicker {
+  border: none !important;
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+.react-datepicker__header {
+  background-color: #fff;
+  border-bottom: 1px solid #eee;
+}
+
+.react-datepicker__current-month {
+  font-weight: 600;
+}
+
+/* =========================================================
+   🌈 주말 컬러 스타일 (일요일=빨강, 토요일=파랑)
+========================================================= */
+
+/* =========================================================
+   🧭 달력 전체 크기 확대 (글자 + 셀 + 여백)
+========================================================= */
+
+/* =========================================================
+   🧭 달력 크기 (적당히 확대된 버전)
+========================================================= */
+
+/* 달력 전체 크기 */
+.react-datepicker {
+  border: none !important;
+  font-size: 16px;
+}
+
+/* 헤더 (년/월 표시 부분) */
+.react-datepicker__current-month {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+/* 요일 이름 영역 */
+.react-datepicker__day-name {
+  width: 2.0rem; /* 🔹 기존 3.2rem → 2.6rem */
+  height: 2.0rem;
+  line-height: 2.0rem;
+  font-size: 15px;
+}
+
+/* 날짜 셀 */
+.react-datepicker__day {
+  width: 2.0rem; /* 🔹 동일 비율 축소 */
+  height: 2.0rem;
+  line-height: 2.0rem;
+  font-size: 15px;
+}
+
+/* 두 달 간격 */
+.react-datepicker__month-container {
+  margin: 0 15px;
+}
+
+/* 내부 달력 간격 */
+.react-datepicker__month {
+  margin: 8px;
+}
+
+/* 헤더 (customHeader) */
+.customHeader {
+  font-size: 18px;
+  margin-bottom: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.customHeader button {
+  font-size: 16px;
+  padding: 4px 8px;
+}
+
+
+
+
+/* 요일 헤더 */
+.react-datepicker__day-name:nth-child(1),
+.react-datepicker__week div:nth-child(1) {
+  color: #e74c3c !important; /* 일요일 빨강 */
+}
+
+.react-datepicker__day-name:nth-child(7),
+.react-datepicker__week div:nth-child(7) {
+  color: #0056b3 !important; /* 토요일 파랑 */
+}
+
+/* 선택된 날짜 */
+.react-datepicker__day--selected,
+.react-datepicker__day--in-selecting-range,
+.react-datepicker__day--in-range {
+  background-color: #0071e3 !important;
+  color: #fff !important;
+}
+
+/* 일요일 선택 시 빨강 배경 */
+.react-datepicker__week div:nth-child(1).react-datepicker__day--selected {
+  background-color: #e74c3c !important;
+  color: #fff !important;
+}
+
+.react-datepicker__week div:nth-child(7).react-datepicker__day--selected {
+  color: #fff !important;
+}
+
+/* hover 시 색상 유지 */
+.react-datepicker__week div:nth-child(1):hover,
+.react-datepicker__week div:nth-child(7):hover {
+  opacity: 0.8;
+}
+
+/* 키보드 선택 (탭 이동) 시 강조 */
+.react-datepicker__day--keyboard-selected {
+  background-color: #005bb5 !important;
+}
+
+/* =========================================================
+   ✅ 적용 버튼
+========================================================= */
+.applyBtn {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  background-color: #0071e3;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.applyBtn:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.applyBtn:hover:not(:disabled) {
+  background-color: #005bb5;
+}
+
+
+/* ------------------------------ */
+/* 1) 외부 월(outside-month) 선택 제거 */
+/* ------------------------------ */
+.react-datepicker__day--outside-month.react-datepicker__day--in-range,
+.react-datepicker__day--outside-month.react-datepicker__day--selected,
+.react-datepicker__day--outside-month.react-datepicker__day--keyboard-selected {
+  background-color: transparent !important;
+  color: #ccc !important;
+  border-radius: 0 !important;
+}
+
+/* ------------------------------ */
+/* 2) hover 상태(endDate 선택 전) 제한 */
+/*    → start~hover 사이 선택 범위만 같은 달에서 표시 */
+/* ------------------------------ */
+.react-datepicker__day--in-selecting-range:not(.react-datepicker__day--outside-month),
+.react-datepicker__day--selecting-range-start:not(.react-datepicker__day--outside-month),
+.react-datepicker__day--selecting-range-end:not(.react-datepicker__day--outside-month) {
+  background-color: #d0e8ff !important; /* hover 색상 */
+  color: inherit !important;
+  border-radius: 0 !important;
+}
+
+/* ------------------------------ */
+/* 3) hover가 다른 달로 퍼지지 않도록 */
+/* ------------------------------ */
+.react-datepicker__day--outside-month.react-datepicker__day--in-selecting-range,
+.react-datepicker__day--outside-month.react-datepicker__day--selecting-range-start,
+.react-datepicker__day--outside-month.react-datepicker__day--selecting-range-end {
+  background-color: transparent !important;
+  color: #ccc !important;
+  border-radius: 0 !important;
+}
+
+/* ------------------------------ */
+/* 4) endDate 선택 후 start~end 사이 색상 유지 */
+/* ------------------------------ */
+.react-datepicker__day--in-range:not(.react-datepicker__day--outside-month),
+.react-datepicker__day--selected:not(.react-datepicker__day--outside-month),
+.react-datepicker__day--keyboard-selected:not(.react-datepicker__day--outside-month) {
+  background-color: #4285f4 !important; /* 선택 색상 */
+  color: #fff !important;
+  border-radius: 0 !important;
+}
+
+/* 시작일/종료일 둥근 처리 */
+.react-datepicker__day--selecting-range-start,
+.react-datepicker__day--selecting-range-end,
+.react-datepicker__day--selected.react-datepicker__day--range-start,
+.react-datepicker__day--selected.react-datepicker__day--range-end {
+  border-radius: 50% !important;
+}
+
+.react-datepicker__day--keyboard-selected:not(.react-datepicker__day--outside-month){
+  background-color: #fff !important;
+  color: #222 !important;
+}
+
+.calendarContainer .react-datepicker__day--range-end {
+  background-color: #ff9f43!important;
+  color: white;
+  border-radius: 50% !important;
+}
+
+.rangeModalBox .react-datepicker__day--range-end {
+  background-color: #ff9f43!important;
+  color: white;
+  border-radius: 50% !important;
+}
+

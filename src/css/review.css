@@ -1,0 +1,122 @@
+.review-form-container {
+  width: 100%;
+}
+.review-form-container .reviewTitle {
+    margin-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #666;;
+}
+
+.review-form-container .product-info {
+  display: flex;
+  gap: 30px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #ececec;
+}
+
+.review-form-container .review-form-container .product-img {
+  width: 120px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.review-form-container .product-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+
+.review-form-container .product-category {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 4px;
+}
+
+.review-form-container .product-name {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.review-form-container .product-date {
+  font-size: 13px;
+  color: #777;
+  margin-top: 6px;
+}
+
+.review-form-container .product-option {
+  font-size: 14px;
+  color: #777;
+  margin-top: 6px;
+}
+
+.review-form-container .review-form {
+  margin-top: 20px;
+}
+
+.review-form-container .form-group {
+  margin-bottom: 18px;
+}
+
+.review-form-container .form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.review-form-container .rating-stars {
+  font-size: 28px;
+  cursor: pointer;
+}
+
+.review-form-container .star {
+  color: #ddd;
+  margin-right: 5px;
+}
+
+.review-form-container .star.active {
+  color: #ffb300;
+}
+
+.review-form-container input[type="text"],
+.review-form-container textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  outline: none;
+  font-family: 'Noto Sans KR';
+  box-sizing: border-box;
+}
+
+.review-form-container input[type="text"]:focus,
+.review-form-container textarea:focus {
+  border-color: #0077ff;
+}
+
+.review-form-container .submit-btn {
+  width: 100%;
+  padding: 12px;
+  margin:0;
+  background: #fe9338;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.review-form-container .submit-btn:hover {
+  background: #005fcc;
+}
+
+.review-form-container .product-img-placeholder{
+    width: 200px;
+}
+
+.review-form-container .product-img-placeholder img{
+    width: 100%;
+}
+
+.review-form-container .previewBox{width: 200px;}
+.review-form-container .previewBox > .preview-img{width: 100%;}

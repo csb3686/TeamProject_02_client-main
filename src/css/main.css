@@ -1,0 +1,712 @@
+/* ====== 메인 페이지 전체 스타일 ====== */
+.main {
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* ====== 히어로 섹션 ====== */
+.heroSection {
+  width: 100%;
+  margin: 145px 0 40px;
+  background: #fff;
+  padding: 0;
+}
+
+.heroBanner {
+  width: 100%;
+  height: 460px;
+  position: relative;
+  border-radius: 0;
+}
+
+.heroBannerOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgb(99 122 102 / 85%), rgb(92 40 8 / 45%));
+  z-index: 1;
+}
+.heroBanner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: saturate(1.05);
+}
+
+.heroContent {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: flex;
+  justify-content: center; /* 가로 중앙 */
+  align-items: flex-start; /* 상단 기준으로 배치 */
+  gap: 28px;
+  padding: 0 40px;
+}
+
+.heroCopy {
+  position: absolute;
+  right: 54%;
+  top: 78px;
+  color: #fff;
+  max-width: 420px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 385px;
+}
+
+/* heroCopy 안 글씨 fade-in */
+.fadeInUp {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s forwards; /* forwards: 애니메이션 끝난 후 상태 유지 */
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* staggered effect: delay를 다르게 주면 순서대로 나타남 */
+.fadeInUp.delay-1 { animation-delay: 0.3s; }
+.fadeInUp.delay-2 { animation-delay: 0.6s; }
+.fadeInUp.delay-3 { animation-delay: 0.9s; }
+.fadeInUp.delay-4 { animation-delay: 1.2s; }
+.fadeInUp.delay-5 { animation-delay: 1.5s; }
+
+
+
+.mainCalenderM .calendarButton {padding: 10px 20px;}
+
+.heroSearchBar {
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 4px;
+  padding: 20px 30px;
+  box-shadow: 0 20px 55px rgba(8, 27, 80, 0.25);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 327px;
+}
+
+.heroSearchField {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  width: 170px;
+}
+
+.heroSearchField label {
+  font-size: 12px;
+  font-weight: 600;
+  color: #646464;
+}
+
+.heroSearchField input {
+  padding: 15px 14px;
+  border-radius: 8px;
+  border: 1px solid #e4e4e4;
+  font-size: 15px;
+  transition: all 0.2s ease;
+}
+
+.heroSearchField input:focus {
+  outline: none;
+  border-color: #ff5f6d;
+}
+
+.heroSearchField.disabled {
+  border-radius: 10px;
+  border: 1px solid #e4e4e4;
+  padding: 12px 14px;
+  color: #a6a6a6;
+  font-size: 14px;
+  justify-content: center;
+}
+
+.heroSearchButton {
+  width: 100px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(120deg, #ff5f6d, #ffc371);
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 12px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.heroSearchButton:hover {
+  transform: translateY(-2px);
+}
+
+.heroInner {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+  padding: 0 60px;
+}
+
+
+
+.heroCopy h1 {
+  font-size: 36px;
+  margin: 0;
+  line-height: 1.3;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.heroCopy h1:nth-of-type(2){font-size: 29px;}
+
+.heroCopy p {
+  margin: 0 0 0 4px;
+  font-size: 18px;
+  color: rgba(255,255,255,0.9);
+}
+
+.heroCopy p:nth-of-type(1){margin-top: 26px;}
+
+.heroSlideInfo {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.heroSlideDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.4);
+}
+
+.heroSlideDot.active {
+  background: #fff;
+}
+
+.heroSlideIndex {
+  font-size: 12px;
+  margin-left: 8px;
+  color: rgba(255,255,255,0.8);
+}
+
+.heroSearchCard {
+  width: 100%;
+  max-width: 500px;
+  background: rgba(255,255,255,0.95);
+  border-radius: 18px;
+  padding: 30px 32px;
+  box-shadow: 0 24px 60px rgba(10,30,90,0.25);
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.heroSearchTitle {
+  font-size: 20px;
+  font-weight: 600;
+  color: #222;
+}
+
+.heroSearchFields {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.heroField {
+  flex: 1;
+  min-width: 180px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.heroField label {
+  font-size: 12px;
+  font-weight: 600;
+  color: #6b6b6b;
+}
+
+.heroField input {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid #e4e4e4;
+  font-size: 15px;
+  transition: all 0.2s ease;
+}
+
+.heroField input:focus {
+  outline: none;
+  border-color: #5f8dff;
+  box-shadow: 0 0 0 3px rgba(95,141,255,0.2);
+}
+
+.heroField.disabled {
+  background: #f7f7f7;
+  border-radius: 10px;
+  padding: 12px 14px;
+  color: #999;
+  font-size: 14px;
+  border: 1px solid #e9ecef;
+  min-height: 58px;
+  justify-content: center;
+}
+
+.heroField.disabled label {
+  display: block;
+  font-size: 12px;
+  color: #999;
+}
+
+.heroField.disabled span {
+  font-size: 14px;
+  color: #bbb;
+}
+
+.heroSearchBtn {
+  width: 100%;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(120deg, #ff5f6d, #ffc371);
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 14px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.heroSearchBtn:hover {
+  box-shadow: 0 12px 25px rgba(255,95,109,0.35);
+  transform: translateY(-2px);
+}
+
+.heroLinkBtn {
+  margin-top: -6px;
+  width: 100%;
+  border: none;
+  border-radius: 10px;
+  background: rgba(255,255,255,0.6);
+  color: #7b57c6;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 12px;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.heroLinkBtn:hover {
+  background: rgba(255,255,255,0.85);
+  color: #5b34b1;
+}
+
+
+/* ====== 상품 섹션 공통 스타일 ====== */
+.productSection {
+  margin-bottom: 50px;
+  padding: 40px 0;
+  background: #fff;
+}
+
+.hotelSection {
+  width: 1000px;
+  margin: 0 auto;
+  background: #fff;
+}
+
+.transSection {
+  margin-top: 50px;
+  /* background: url(../../public/images/mong.jpg) no-repeat; */
+  /* background: linear-gradient(2deg,rgba(162, 218, 235, 1) 0%, rgba(173, 210, 217, 1) 39%, rgba(255, 255, 255, 1) 100%); */
+  background: #a5c2c729;
+}
+
+.transSection .inner{
+  width: 1000px;
+  margin: 0 auto;
+}
+
+.experienceSection {
+  background: #fff;
+  width: 1000px;
+  margin: 0 auto;
+}
+
+.sectionHeader {
+  max-width: 1200px;
+  margin: 0 auto 30px;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.sectionTitle h2 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #222;
+  margin: 0 0 6px 0;
+  line-height: 1.3;
+}
+
+.sectionTitle p {
+  font-size: 14px;
+  color: #666;
+  margin: 0;
+}
+
+.moreBtn {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 8px 16px;
+  background: transparent;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  color: #333;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  
+}
+.moreBtn.trbtn {box-shadow: none;}
+
+.moreBtn:hover {
+  border-color: #ff6b00;
+  color: #333;
+  background: transparent;
+}
+
+.moreBtn i {
+  font-size: 10px;
+}
+
+/* ====== 숙소 섹션 - 4열 그리드 ====== */
+.hotelGrid {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+/* ====== 교통 섹션 - 2x2 그리드 ====== */
+.transGrid {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.transCard {
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 1px solid #e9ecef;
+  display: flex;
+  align-items: center;
+  gap: 0;
+}
+
+.transCard:hover {
+  transform: translateX(4px);
+  border-color: #fe9338;
+}
+
+.transImage {
+  position: relative;
+  width: 200px;
+  height: 140px;
+  flex-shrink: 0;
+  overflow: hidden;
+  background: #f5f5f5;
+}
+
+.transImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.transCard:hover .transImage img {
+  transform: scale(1.05);
+}
+
+.transInfo {
+  flex: 1;
+  padding: 16px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 140px;
+}
+
+.transCard .productName {
+  font-size: 16px;
+  margin-bottom: 8px;
+  min-height: auto;
+  -webkit-line-clamp: 1;
+}
+
+.transRoute {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: #666;
+  margin-bottom: 12px;
+}
+
+.routePoint {
+  font-weight: 600;
+  color: #333;
+}
+
+.routeArrow {
+  color: #fe9338;
+  font-size: 12px;
+}
+
+.transCard .productPrice {
+  margin: 0;
+}
+
+.transCard .priceAmount {
+  color: #fe9338;
+  font-size: 18px;
+}
+
+/* ====== 체험 섹션 - 2x2 그리드 ====== */
+.experienceGrid {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.experienceCard {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  height: 260px;
+  border: 1px solid #e9ecef;
+}
+
+.experienceCard:hover {
+  transform: translateY(-4px);
+  border-color: #fe9338;
+}
+
+.experienceImage {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.experienceImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.experienceCard:hover .experienceImage img {
+  transform: scale(1.08);
+}
+
+.experienceOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.2) 50%, rgba(0,0,0,0.6) 100%);
+  z-index: 1;
+}
+
+.experienceInfo {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 18px;
+  z-index: 2;
+  color: #fff;
+}
+
+.experienceRegion {
+  font-size: 11px;
+  color: rgba(255,255,255,0.9);
+  margin-bottom: 6px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.experienceCard .productName {
+  font-size: 16px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 6px;
+  line-height: 1.3;
+  -webkit-line-clamp: 2;
+}
+
+.experienceCard .productDesc {
+  font-size: 12px;
+  color: rgba(255,255,255,0.9);
+  margin-bottom: 10px;
+  line-height: 1.4;
+  -webkit-line-clamp: 2;
+}
+
+.experienceCard .productPrice {
+  margin: 0;
+}
+
+.experienceCard .priceOriginal {
+  color: rgba(255,255,255,0.7);
+}
+
+.experienceCard .priceAmount {
+  color: #fff;
+  font-size: 18px;
+}
+
+.experienceCard .productBadge {
+  top: 12px;
+  right: 12px;
+  left: auto;
+  background: rgba(254, 147, 56, 0.9);
+}
+
+/* ====== 상품 카드 공통 스타일 ====== */
+.productCard {
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 1px solid #e9ecef;
+  display: flex;
+  flex-direction: column;
+}
+
+.productCard:hover {
+  transform: translateY(-4px);
+  border-color: #fe9338;
+}
+
+.productImage {
+  position: relative;
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+  background: #f5f5f5;
+}
+
+.productImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.productCard:hover .productImage img {
+  transform: scale(1.05);
+}
+
+.productBadge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  padding: 4px 10px;
+  background: rgba(254, 147, 56, 0.95);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 600;
+  border-radius: 4px;
+}
+
+.productBadge.location {
+  background: rgba(254, 147, 56, 0.95);
+}
+
+.productCard .productInfo {
+  padding: 16px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.productName {
+  font-size: 15px;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 10px;
+  line-height: 1.4;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  min-height: 42px;
+}
+
+.productPrice {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  margin-bottom: 10px;
+}
+
+.priceOriginal {
+  font-size: 12px;
+  color: #999;
+  text-decoration: line-through;
+  font-weight: 400;
+}
+
+.priceAmount {
+  font-size: 18px;
+  font-weight: 700;
+  color: #fe9338;
+}
+
+.priceUnit {
+  font-size: 14px;
+  color: #fe9338;
+  font-weight: 600;
+}
+
+.productDesc {
+  font-size: 13px;
+  color: #666;
+  line-height: 1.5;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  flex: 1;
+}

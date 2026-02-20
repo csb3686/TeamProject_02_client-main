@@ -1,0 +1,589 @@
+
+/* ====== 섹션 공통 스타일 ====== */
+#detailPage #detailSection {
+  padding-bottom: 70px;
+  margin-bottom: 50px;
+  border-bottom: 1px solid #ccc;
+}
+#detailPage #detailSection.reviewSection {border-bottom: none;}
+#detailPage .detailTitle {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-bottom: 25px;
+  color: #222;
+  border-left: 6px solid #1a57a9;
+  padding-left: 10px;
+}
+
+#detailPage #detailSection .spotinfo {display: inline-block;}
+
+/* ====== 이미지 섹션 ====== */
+
+#detailPage .infoSection .imgBox {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+#detailPage .infoSection .imgBox img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+#detailPage .infoSection .totalPage {
+  position: absolute;
+  right: 18px;
+  bottom: 18px;
+  padding:12px;
+  z-index: 1;
+  background-color: rgba(20, 23, 25, 0.79);
+  border-radius: 16px;
+  color:#fff;
+  font-weight: bold;
+}
+
+#detailPage .infoSection .infoBox {
+  margin-top: 30px;
+  text-align: left;
+}
+
+#detailPage .infoSection .infoBox .detailCon{display: block;}
+
+#detailPage .infoSection .name {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #111;
+}
+
+#detailPage .infoSection .category {
+  font-size: 1rem;
+  color: #666;
+  margin-top: 5px;
+}
+
+#detailPage .infoSection .point {
+  margin-top: 10px;
+  font-size: 1.1rem;
+  color: #0071e3;
+}
+
+#detailPage .infoSection .detailCon {
+  margin-top: 15px;
+  font-size: 1rem;
+  color: #555;
+}
+
+#detailPage .infoSection .detailNotice {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: #c00;
+  background: #fff2f2;
+  padding: 10px;
+  border-radius: 5px;
+  display: inline-block;
+}
+
+/* ====== 객실 선택 섹션 ====== */
+#detailPage .listSection .selectSection {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f9f9f9;
+  padding: 15px 25px;
+  border-radius: 8px;
+  margin-bottom: 25px;
+}
+
+#detailPage .listSection .dateBox,
+#detailPage .listSection .totalPer {
+  font-size: 1rem;
+  color: #333;
+}
+
+#detailPage .optionList {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+
+
+#detailPage .optionList .listwrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  padding: 28px;
+  transition: all 0.3s;
+  height: 278px;
+  box-sizing: border-box;
+}
+
+#detailPage .optionList.exop .listwrap{align-items: flex-start;}
+
+#detailPage .optionList .listwrap .rightBox{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    min-width: 180px;
+}
+
+#detailPage .optionList .listwrap:hover {
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  transform: translateY(-3px);
+  gap:14px;
+}
+
+#detailPage .optionList .listwrap .leftBox {display: flex;}
+#detailPage .optionList.optionList.exop .listwrap .leftBox {flex-direction: column;justify-content: space-between;height: 100%;}
+
+#detailPage .optionList .imgwrap {
+  width: 410px;
+  height: 220px;
+  background: #eee;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 20px;
+}
+
+#detailPage .optionList .imgwrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#detailPage .optionList .listwrap .detailPriceBox {
+  margin-top: auto;
+}
+
+#detailPage .salecountBox {display: flex; height: 38px;}
+#detailPage .salecountBox > span{margin-right: 10px;line-height: 36px;}
+
+#detailPage .optionInfo .name {
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin: 10px 0;
+}
+
+#detailPage .optionInfo.hDtailOp {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#detailPage .detailCon {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+#detailPage .optionList .rightBox .btnBox{
+  display: flex;
+  justify-content: flex-end;
+}
+
+#detailPage .optionList .price2Box{text-align: right;}
+
+/* 정가 */
+#detailPage .optionList .price2{
+  text-align: right;
+  color: #ccc;text-decoration: line-through;color: #6e6f73;
+}
+
+/* 소비자가(할인율적용) */
+#detailPage .optionList .price1 {
+  text-align: right;
+  font-weight: 600;
+  font-size: 24px;
+  margin: 4px 0 20px 0;
+}
+
+#detailPage .optionList .detailDiscount {font-weight: bold;margin-right: 8px;}
+
+/* ====== 버튼 ====== */
+/* #detailPage .optionList .btnCart,
+#detailPage .optionList .btnBook {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  color: #fff;
+  
+} */
+
+#detailPage .optionList .btnCart {
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  color: #111;
+  font-size: 16px;
+}
+
+#detailPage .optionList .btnCart:hover {
+   border: 1px solid #000;
+}
+
+#detailPage .optionList .btnBook:hover {
+  background-color: #ff5e49;
+}
+
+/* ====== 지도 섹션 ====== */
+#detailPage .mapSection #map {
+  width: 100%;
+  background-color: #e5e5e5;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+#detailPage .mapSection .spotinfo {
+  font-size: 18px;
+  color: #444;
+  margin-left: 10px;
+}
+
+/* ====== 후기 섹션 ====== */
+#detailPage .reviewSection {
+  /* margin: 60px auto;
+  background: #fff;
+  border-radius: 10px;
+  padding: 40px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05); */
+  position: relative;
+}
+
+#detailPage .reviewSection .detailTitle {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-bottom: 25px;
+  color: #222;
+  border-left: 6px solid #0071e3;
+  padding-left: 10px;
+}
+
+#detailPage .reviewContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+#detailPage .reviewList {
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  cursor: grab;
+  user-select: none;
+  width: 100%;
+  padding: 10px 0;
+}
+
+#detailPage .reviewList .noReviews {
+    width: 100%;
+    background: #f9f9f9;
+    padding: 30px;
+    border-radius: 8px;
+}
+
+#detailPage .reviewList.active {
+  cursor: grabbing;
+}
+
+#detailPage .reviewList::-webkit-scrollbar {
+  display: none;
+}
+
+#detailPage .reviewCard {
+  flex: 0 0 240px;
+  background: #fff;
+  border-radius: 12px;
+  padding: 16px;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  border: 1px solid #f0f0f0;
+}
+
+#detailPage .reviewCard:hover {
+  transform: translateY(-4px);
+}
+
+/* 리뷰 헤더 (사용자 정보) */
+#detailPage .reviewCard .reviewHeader {
+  margin-bottom: 2px;
+}
+
+#detailPage .reviewCard .reviewUserInfo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#detailPage .reviewCard .reviewAvatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+#detailPage .reviewCard .reviewAvatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#detailPage .reviewCard .reviewAvatar i {
+  color: #fff;
+  font-size: 16px;
+}
+
+#detailPage .reviewCard .reviewUserMeta {
+  flex: 1;
+  min-width: 0;
+}
+
+#detailPage .reviewCard .reviewUserid {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 4px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+#detailPage .reviewCard .reviewStars {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+
+#detailPage .reviewCard .reviewStars .star {
+  font-size: 12px;
+  color: #ddd;
+  line-height: 1;
+}
+
+#detailPage .reviewCard .reviewStars .star.filled {
+  color: #ffb400;
+}
+
+#detailPage .reviewCard .reviewPoint {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #666;
+  margin-left: 4px;
+}
+
+/* 리뷰 이미지 */
+#detailPage .reviewCard .reviewImageBox {
+  width: 100%;
+  height: 150px;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #f5f5f5;
+  margin: 6px 0;
+}
+
+#detailPage .reviewCard .reviewImageBox img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+#detailPage .reviewCard .reviewImageBox:hover img {
+  transform: scale(1.05);
+}
+
+/* 리뷰 내용 */
+#detailPage .reviewCard .reviewContent {
+  font-size: 0.85rem;
+  color: #444;
+  line-height: 1.5;
+  flex: 1;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  word-break: break-word;
+}
+
+/* 리뷰 날짜 */
+#detailPage .reviewCard .reviewDate {
+  font-size: 0.75rem;
+  color: #999;
+  text-align: right;
+  margin-top: auto;
+  padding-top: 8px;
+  border-top: 1px solid #f0f0f0;
+}
+
+#detailPage .arrowBtn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255,255,255,0.9);
+  border: none;
+  font-size: 2rem;
+  color: #333;
+  cursor: pointer;
+  padding: 5px 18px;
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  transition: background 0.2s;
+  z-index: 10;
+}
+
+#detailPage .arrowBtn:hover {
+  background: #0071e3;
+  color: white;
+}
+
+#detailPage .arrowBtn.left {
+  left: -40px;
+}
+
+#detailPage .arrowBtn.right {
+  right: -28px;
+}
+
+#detailPage .arrowBtn.imgScroll {
+  background: none;
+  box-shadow: none;
+}
+
+#detailPage .arrowBtn.imgScroll.left {
+  left: -10px;
+}
+
+#detailPage .arrowBtn.imgScroll.right {
+  right: -10px;
+}
+
+/* 항공편 정보박스 스타일 */
+#detailPage .flight-info-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#detailPage .optionList.flight-wrap {
+  
+  background: #fff;
+  padding: 42px 56px;
+  border-radius: 10px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+  gap: 42px;
+}
+
+#detailPage .flight-airline {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+#detailPage .flight-info-bottom{
+  display: flex;
+  justify-content: space-between;
+  height: 40px;
+}
+
+#detailPage .airline-name {
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #0071e3;
+}
+
+#detailPage .flight-number {
+  font-size: 1rem;
+  color: #555;
+}
+
+#detailPage .flight-times {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+#detailPage .time-block {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+#detailPage .time-label {
+  font-size: 0.85rem;
+  color: #888;
+  margin-bottom: 5px;
+}
+
+#detailPage .time-label-lo {
+  color: #000;
+  font-size: 16px;
+}
+
+#detailPage .time-value {
+  font-weight: 700;
+  font-size: 1.4rem;
+}
+
+#detailPage .duration {
+  font-weight: 600;
+  color: #0071e3;
+}
+
+#detailPage .flight-price {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  font-weight: 700;
+  font-size: 18px;
+  color: #222;
+}
+
+#detailPage .seats-left {
+  font-size: 0.95rem;
+  color: #d33;
+  margin-top: 5px;
+}
+
+#detailPage .select-button {
+  background-color: #0071e3;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-weight: 600;
+  padding: 12px 24px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  height: fit-content;
+}
+
+#detailPage .select-button:hover {
+  background-color: #005bb5;
+}
+
+.goListBtn { 
+  margin: 0 auto;
+    display: block;
+    font-size: 20px;
+    transition: all 0.3s;
+  }
+.goListBtn:hover{
+  transform: translateY(-3px);
+}

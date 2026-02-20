@@ -1,0 +1,148 @@
+.subPage {
+  width: 1000px;
+  padding-top: 200px;
+  margin: 0 auto;
+}
+
+.topRightControls button:hover,
+.topRightControls button.active {
+  color:#fe9338;
+}
+
+
+.item {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  background: #fff;
+  margin: 0;
+  padding: 40px 20px;
+  cursor: pointer;
+  position: relative;
+  border-top: 1px solid #ccc;
+}
+
+.itemList .image {
+  width: 300px;
+  height: 200px;
+  margin-right: 32px;
+}
+
+.itemList .image img {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+
+.itemInfo {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.itemInfo .name-list {
+  font-size: 13pt;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.itemInfo .content-list {
+  font-size: 11pt;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.itemInfo .city {
+  font-size: 10.5pt;
+  color: #666;
+  margin-bottom: 6px;
+}
+
+.itemInfo .stats {
+  font-size: 12px;
+  color: #555;
+  font-size: 15px !important;
+  margin-top: 58px;
+}
+
+.itemInfo .stats.statusEx {
+  margin-top: 55px;
+}
+
+.hashtag {
+  color: #fd5c4a;
+  font-size: 0.9rem;
+  margin-top: 4px;
+}
+
+
+.itemInfo .priceBox {
+  position: absolute;
+  right: 40px;
+  top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; 
+  text-align: right;
+}
+
+
+.originalPrice {
+  text-decoration: line-through;
+  color: #999;
+  font-size: 11pt;
+  margin: 0;
+  padding: 0;
+  align-self: flex-end;
+  line-height: 3; 
+}
+
+
+.salePrice {
+  font-weight: bold;
+  color: #000;
+  font-size: 16pt;
+  margin: 0;
+  padding: 0;
+  align-self: flex-end; 
+  line-height: 1;
+}
+
+
+.notice {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  height: 30px;
+  width: 100%;
+  text-align: center;
+  background: lightgray;
+  margin: 20px auto;
+  border-radius: 6px;
+}
+
+.notice h2 {
+  margin: 0;
+}
+
+.searchBox {position: relative; width: 250px;}
+
+.searchBox > .fa-search {
+    font-size: 20px;
+    margin-right: 8px;
+    color: rgb(102, 102, 102);
+    position: absolute;
+    left: 11px;
+    top: 9px;}
+
+.searchBox input {
+    padding: 10px 10px 10px 42px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
+}

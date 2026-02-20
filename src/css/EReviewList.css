@@ -1,0 +1,181 @@
+
+/* Best Review Section */
+.bestReviewSection {
+  margin-bottom: 30px;
+}
+
+.bestReviewSection h3 {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+.bestReviewList {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  padding-bottom: 40px;
+
+}
+
+.bestReviewCard {
+    border: 1px solid #eee;
+    border-radius: 5px;
+    padding: 22px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.bestReviewCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+.bestReviewCard img {
+  width: 200px;
+  height: 170px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-bottom: 22px;
+}
+
+.bestReviewInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.bestTitle {
+  font-weight: bold;
+  color: #333;
+  font-size: 0.95rem;
+}
+
+.bestUser {
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.bestPoint {
+  color: #f5b301;
+  font-size: 1rem;
+}
+
+/* 검색창 및 정렬 */
+.topRightControls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 22px 0 20px;
+}
+.filterGroup {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.filterGroup button {
+  padding: 2px 6px;
+  border: none;
+  background: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+  color: #5e5e5e;
+  box-shadow: none;
+}
+
+.filterGroup button.active {
+  color: #fe9338;
+}
+
+.hotelCount {
+      margin-right: 12px;
+    border-right: 1px solid #ccc;
+    padding-right: 19px;
+}
+
+.experienceCount {    
+  margin-right: 12px;
+    border-right: 1px solid #ccc;
+    padding-right: 19px;
+  }
+
+.titlerow {
+  display: flex;
+  border-top: 1px solid #333;
+  border-bottom: 1px solid #ccc;
+  padding: 10px 0;
+  text-align: center;
+}
+
+.titlecol {
+  text-align: center;
+}
+
+.itemList {
+  border-bottom: 1px solid #ddd;
+}
+
+.itemRow {
+  display: flex;
+  border-bottom: 1px solid #eee;
+  padding: 12px 0;
+  align-items: center;
+  transition: background-color 0.2s;
+  margin-bottom: 10px; 
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.itemRow:hover {
+  background-color: #fafafa;
+}
+
+/* 열별 비율 */
+.col-image {
+  flex: 0 0 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.review-img {
+  width: 180px;
+  height: 130px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.noImage {
+  color: #aaa;
+  font-size: 0.8rem;
+}
+
+.col-writer {
+  flex: 0 0 15%;
+  text-align: center;
+}
+
+.col-content {
+  flex: 1;
+  padding: 0 10px;
+}
+
+.col-date {
+  flex: 0 0 15%;
+  text-align: center;
+}
+
+.col-point {
+  flex: 0 0 13%;      
+  text-align: center;
+  font-size: 1.1rem;
+  white-space: nowrap; 
+}
+
+.noResult {
+  text-align: center;
+  padding: 40px;
+  color: #999;
+}

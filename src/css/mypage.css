@@ -1,0 +1,155 @@
+
+.myWrap {margin:0 auto;padding-top: 170px;width: 1000px;}
+.mypage-content{
+    display: flex;
+    min-height: 490px;
+}
+
+.mypage-submenu{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-right: 64px;
+}
+
+.mypage-submenu ul{
+    border-radius: 10px;
+    margin: 16px 0;
+    width: 130px;
+}
+
+.mypage-submenu ul li{
+    border-bottom: 1px solid #aaa;
+    padding: 12px 5px;
+    cursor: pointer;
+    text-align: left;
+    font-size: 11pt;
+}
+
+.mypage-submenu ul li:first-child{
+    border-top: 2px solid #666;
+}
+
+.mypage-submenu ul li:last-child{
+    border: none;
+}
+
+.mypage-submenu ul li:hover{
+    color: #fe9338;
+}
+
+.mypage-submenu ul li.active {
+    color: #fe9338;
+}
+
+.mypage-content-wrap{
+    display: flex;
+    flex-direction: column;
+    flex: 2;
+}
+
+.mypage-title{
+    font-size: 23pt;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.mypage-detail{
+    display: flex;
+    flex-direction: column;
+}
+
+.mypage-userinfo{
+    display: flex;
+    margin: 20px 30px;
+}
+
+.mypage-userinfo div{
+    font-size: 17pt;
+    padding: 0 50px;
+    border-right: 1px solid #aaa;
+}
+
+.mypage-userinfo div:first-child{
+    padding-left: 0;
+}
+
+.mypage-userinfo div:last-child{
+    padding-right: 0;
+    border: none;
+}
+
+.mypage-order{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+.mypage-row-title{
+    border-top: 1px solid #cfcfcf;
+    border-bottom: 1px solid #e9e9e9;
+    padding: 14px 25px;
+    display: flex;
+    background: #f7f7f7;
+}
+
+
+.mypage-col-title{
+    font-size: 11pt;
+    flex: 1;
+    display: flex;
+}
+
+.mypage-col-title:nth-child(2){
+    flex: 2;
+}
+
+.mypage-section{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+.mypage-section + .mypage-section {margin-top: 30px;}
+
+.mypage-section-title{
+    font-size: 16px;
+}
+
+
+.mypage-row{
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #f1f1f1;
+    padding: 20px 25px;
+    cursor: pointer;
+    min-height: 95px;
+    box-sizing: border-box;
+}
+
+.mypage-col{
+    display: flex;
+    font-size: 12pt;
+    flex: 1;
+}
+
+.mypage-col:nth-child(2){
+    flex: 2;
+}
+.mypage-col:nth-child(2):hover{
+    text-decoration: underline;
+}
+
+.mypage-col button{padding: 10px 10px;transition: transform 0.2s ease;    margin-left: 10px;}
+.mypage-col button.reviewTodayBtn {
+    background: #db2222;
+    font-weight: bold;
+}
+.mypage-col button.wReviewBtn:hover{box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);background: #fe5c4b;}
+.mypage-col button.reviewTodayBtn:hover{box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);background: #fe5c4b;}
+
+.mypage-col .fa-angle-down {
+    font-weight: 600;
+    font-size: 20px;
+    padding: 6px;
+}

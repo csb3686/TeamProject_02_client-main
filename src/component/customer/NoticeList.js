@@ -1,0 +1,175 @@
+import React, { useState, useEffect } from 'react'
+import axios from 'axios'
+import { useNavigate } from 'react-router-dom'
+import { useSelector } from 'react-redux';
+import '../../css/qnaList.css';
+
+import Header from '../Header';
+import Footer from '../Footer';
+
+function NoticeList() {
+
+    const loginUser = useSelector(state => state.user);
+    const [noticeList, setNoticeList] = useState([]);       
+    const [allNoticeList, setAllNoticeList] = useState([]); 
+    const [paging, setPaging] = useState({});
+    const [pages, setPages] = useState([]);
+    const [currentPage, setCurrentPage] = useState(1);
+    const [searchTerm, setSearchTerm] = useState('');
+    const [sortOption, setSortOption] = useState('default');
+
+    const navigate = useNavigate();
+
+    
+    useEffect(() => {
+        if (!loginUser.userid) {
+            navigate('/login');
+            return;
+        }
+
+        
+        const loadPageData = async (page) => {
+            try {
+                const res = await axios.get(`/api/customer/getNoticeList/${page}`);
+                setNoticeList(res.data.noticeList);
+                setPaging(res.data.paging);
+
+                let p = [];
+                for (let i = res.data.paging.beginPage; i <= res.data.paging.endPage; i++) {
+                    p.push(i);
+                }
+                setPages([...p]);
+            } catch (err) {
+                console.error(err);
+            }
+        };
+
+       
+        const loadAllNotice = async () => {
+            try {
+                let allList = [];
+                let page = 1;
+                while (true) {
+                    const res = await axios.get(`/api/customer/getNoticeList/${page}`);
+                    allList = [...allList, ...res.data.noticeList];
+
+                    if (!res.data.paging.next) break;
+                    page++;
+                }
+                setAllNoticeList(allList);
+            } catch (err) {
+                console.error(err);
+            }
+        };
+
+        loadPageData(1);
+        loadAllNotice();
+    }, [loginUser.userid, navigate]);
+
+    
+    const onPageMove = (p) => {
+        axios.get(`/api/customer/getNoticeList/${p}`)
+            .then((res) => {
+                setNoticeList([...res.data.noticeList]);
+                setPaging(res.data.paging);
+
+                let pArr = [];
+                for (let i = res.data.paging.beginPage; i <= res.data.paging.endPage; i++) {
+                    pArr.push(i);
+                }
+                setPages([...pArr]);
+                setCurrentPage(p);
+            })
+            .catch(err => console.error(err));
+    };
+
+   
+    const filteredNotice = searchTerm.trim() === ''
+        ? noticeList
+        : allNoticeList.filter(notice =>
+            notice.title?.toLowerCase().includes(searchTerm.toLowerCase())
+        ).sort((a, b) => {
+            switch (sortOption) {
+                case 'high':
+                    return b.title.localeCompare(a.title);
+                default:
+                    return 0;
+            }
+        });
+
+    return (
+        <div>
+            <Header />
+            <div className='total'>
+                <div className='submenu' onClick={() => { navigate('/QnaList') }}>qna</div>
+                <div className='submenu active' onClick={() => { navigate('/NoticeList') }}>notice</div>
+                <div className='qnaList'>
+                    <div style={{ height: '30px', display: 'flex', justifyContent: 'center', alignItems: 'center', margin: '20px 0', fontSize: '20px' }}>
+                        <h2>RODY투어 고객센터입니다. 무엇을 도와드릴까요?</h2>
+                    </div>
+                    <div style={{ height: '20px', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+                        <h2>공지사항</h2>
+                    </div>
+
+                    
+                    <div className="searchBox qnaSearch">
+                        <i className="fas fa-search" style={{ fontSize: '20px', marginRight: '8px', color: '#000' }}></i>
+                        <input
+                            type="text"
+                            placeholder="검색어를 입력하세요"
+                            value={searchTerm}
+                            onChange={(e) => setSearchTerm(e.target.value)}
+                        />
+                    </div>
+
+                    
+                    <div style={{ textAlign: 'right', padding: '0 20px', marginBottom: '10px', color: '#555', fontSize: '20px' }}>
+                        <span className="qnaCount">총 {paging.totalCount}개</span>
+                    </div>
+
+                    
+                    <div className='titlerow'>
+                        <div className='titlecol'>번호</div>
+                        <div className='titlecol'>제목</div>
+                        <div className='titlecol'>작성일</div>
+                    </div>
+
+                   
+                    {
+                        filteredNotice.length > 0 ? filteredNotice.map((notice, idx) => (
+                            <div className='row-qna' key={idx}>
+                                <div className='col-qna'>{notice.nid}</div>
+                                <div className='col-qna' onClick={() => navigate(`/NoticeDetail/${notice.nid}`)}>
+                                    {notice.title}
+                                </div>
+                                <div className='col-qna'>
+                                    {notice.indate ? notice.indate.substring(0, 10) : null}
+                                </div>
+                            </div>
+                        )) : <div style={{ textAlign: 'center', padding: '20px' }}>검색 결과가 없습니다.</div>
+                    }
+
+                    
+                    {searchTerm.trim() === '' && (
+                        <div id='paging' style={{ textAlign: "center", padding: "10px" }}>
+                            {paging.prev && <span style={{ cursor: "pointer" }} onClick={() => onPageMove(paging.beginPage - 1)}> ◀ </span>}
+                            {pages.map((page, idx) => (
+                                <span
+                                    style={{ cursor: "pointer", fontWeight: page === currentPage ? 'bold' : 'normal' }}
+                                    key={idx}
+                                    onClick={() => onPageMove(page)}
+                                >
+                                    &nbsp;{page}&nbsp;
+                                </span>
+                            ))}
+                            {paging.next && <span style={{ cursor: "pointer" }} onClick={() => onPageMove(paging.endPage + 1)}> ▶ </span>}
+                        </div>
+                    )}
+                </div>
+            </div>
+            <Footer />
+        </div>
+    )
+}
+
+export default NoticeList;

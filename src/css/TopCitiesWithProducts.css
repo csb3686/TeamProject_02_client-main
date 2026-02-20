@@ -1,0 +1,111 @@
+/* 화면 전체가 헤더에 가려지지 않도록 보정 */
+.top-cities-container {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 200px 20px 50px;
+}
+
+.title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.city-box {
+  border: 1px solid #ddd;
+  border-radius: 14px;
+  padding: 25px;
+  margin-bottom: 30px;
+  background: #fafafa;
+}
+
+.city-title {
+  font-size: 1.4rem;
+  margin-bottom: 20px;
+}
+
+.product-list {
+  display: flex;
+  gap: 30px;
+}
+
+.product-card {
+  width: 30%;
+  border: 1px solid #ccc;
+  padding: 15px;
+  border-radius: 12px;
+  background: white;
+  text-align: center;
+}
+
+.product-card h4 {
+  margin-bottom: 10px;
+}
+
+.product-img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.product-name {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.no-img {
+  width: 100%;
+  height: 140px;
+  border: 1px dashed #ccc;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #777;
+}
+
+.loading {
+  padding-top: 150px;
+  text-align: center;
+}
+
+.back-btn {
+  text-align: center;
+  margin-top: 40px;
+  cursor: pointer;
+}
+
+.more {
+  margin-top: 50px;
+  margin-bottom: 40px;
+
+  display: flex;
+  justify-content: center;       
+  align-items: center;
+  gap: 50px;                      
+
+  width: 100%;
+  flex-wrap: wrap;                
+}
+
+.more div {
+  background: rgba(254, 147, 56, 0.95);
+  padding: 15px 25px;
+  border-radius: 12px;
+  text-align: center;
+  color: #fff;
+  font-size: 1.05rem;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;            
+  transition: 0.25s;
+}
+
+.more div:hover {
+  background: #ff5e49;
+  transform: translateY(-3px);
+}
+
+

@@ -1,0 +1,47 @@
+.guest-wrapper {
+  position: relative;
+}
+
+.guest-wrapper .notice {
+  font-size: 13px;
+  color: #555;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.guest-wrapper .counter {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.guest-wrapper .control {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.guest-wrapper .control button {
+  position: relative;
+  cursor: pointer;
+  font-size: 16px;
+  width: 36px;
+  height: 36px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background-color: #fff;
+  color: #000;
+  margin: 0;
+  
+}
+
+.guest-wrapper .control button:hover{border: 1px solid #000;}
+
+
+.guest-wrapper .control button .fas{
+  position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 11px;}
+.guest-wrapper .control .saleCounttxt{min-width: 20px;text-align: center;}

@@ -1,0 +1,143 @@
+.joinWrap {position: relative;width: 100%;height: 100%;}
+.join{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    border: 1px solid #fff;
+    background-color: #fff;
+    padding: 50px 80px;
+    height: 600px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px #aaa;
+}
+
+.join-menu{
+    margin-bottom: 50px;
+    cursor: pointer;
+}
+
+.join-title{
+    font-size: 20pt;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.join-form{
+    display: flex;
+    flex-direction: column;
+}
+
+.join-field{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 0;
+}
+
+.join-field:first-child{
+    display: flex;
+    justify-content: space-between;
+}
+
+.join-field div{
+    width: 150px;
+}
+
+.join-field input[type=text]{
+    background-color: #eee;
+    border: 1px solid #eee;
+    height: 25px;
+    border-radius: 5px;
+    flex: 3;
+}
+
+.join-field input[type=password]{
+    background-color: #eee;
+    border: 1px solid #eee;
+    height: 25px;
+    border-radius: 5px;
+    flex: 3;
+}
+
+.join-field input[type=button]{
+    width: 80px;
+    height: 28px;
+    border-radius: 5px;
+    margin-left: 5px;
+    border: none;
+    background-color: #444;
+    color: white;
+    cursor: pointer;
+}
+
+.join-field input[type=text]:focus{
+    outline: 1px;
+    border: 1px solid #aaa;
+    background-color: white;
+}
+
+.join-field input[type=password]:focus{
+    outline: 1px;
+    border: 1px solid #aaa;
+    background-color: white;
+}
+
+.join-btns{
+    display: flex;
+    margin-top: 30px;
+}
+
+.join-field input[type=date]{
+    flex: 3;
+    border: none;
+    height: 25px;
+    background-color: #eee;
+    border-radius: 5px;
+    padding: 3px;
+    color: #444;
+}
+
+.join-btns input{
+    flex: 1;
+    border: none;
+    background-color: #444;
+    color: white;
+    height: 30px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.join-btns input:last-child{
+    margin-left: 5px;
+    background-color: white;
+    color: #444;
+    border: 1px solid #eee;
+}
+
+/* ///////////////////////////////////////////// */
+
+/* //////////////// 아이디비번찾기 ////////////// */
+.findAccountPage {position:relative; width:100%;height: 100%;}
+.findAccountPage .findAwrap {position: absolute;left:50%;top: 46%;transform: translate(-50%, -50%);}
+.findAccountPage .memberform {    
+    border: 1px solid #ccc;
+    padding: 53px 64px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px #aaa;
+}
+.findAccountPage .findA{font-size: 28px;margin: 0 0 20px 0;}
+.findAccountPage .findAinput{
+  flex: 1;
+  padding: 8px 12px;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  outline: none;
+}
+.findAccountPage .findAbottom {display: flex;justify-content: space-evenly;align-items: center;margin-top: 50px;}
+
+.findAccountPage .findAbottom > button {background: #fff;border: none;color:#474747;padding: 0;}
+
+.findAccountPage .findPwdBox {margin:20px 0 0;}

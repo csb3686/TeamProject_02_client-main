@@ -1,0 +1,20 @@
+.image-field {
+    margin-top: 10px;
+}
+
+.imgBox {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.fileInput {
+    margin-bottom: 10px;
+}
+
+.preview {
+    width: 250px;
+    height: auto;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+}

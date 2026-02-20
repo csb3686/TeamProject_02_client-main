@@ -1,0 +1,158 @@
+/* 전체 컨테이너 */
+.total {
+  width: 1000px;
+  margin: 0 auto;
+  padding-top: 170px;
+}
+
+/* 상단 메뉴 (qna / notice) */
+.submenu {
+  display: inline-block;
+  margin-right: 10px;
+  background: #f0f0f0;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  color: #555;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.submenu:hover,
+.submenu.active {
+  background: rgba(254, 147, 56, 0.95);
+  color: #fff;
+}
+
+/* QnA 리스트 컨테이너 */
+.qnaList {
+  margin-top: 40px;
+  border-radius: 16px;
+  padding: 16px 0;
+}
+
+/* 헤더 행 (번호/제목/작성일) */
+.titlerow {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #ddd;
+  padding: 12px 20px;
+  font-weight: 500;
+  color: #333;
+}
+
+.titlecol {
+  flex: 1;
+  text-align: center;
+}
+
+/* QnA 행 */
+.row-qna {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 20px;
+  border-bottom: 1px solid #eee;
+  transition: background 0.2s ease;
+  cursor: pointer;
+}
+
+.row-qna:hover {
+  background: #f9f9ff;
+}
+
+
+.col-qna {
+  flex: 1;
+  text-align: center;
+  color: #444;
+  font-size: 0.95rem;
+}
+
+
+.col-qna:nth-child(2) {
+  text-align: left;
+  font-weight: 500;
+  color: #333;
+  cursor: pointer;
+}
+
+.col-qna:nth-child(2):hover {
+  color: rgba(254, 147, 56, 0.95);
+  text-decoration: underline;
+}
+
+
+#paging {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  padding: 16px;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+#paging span {
+  padding: 4px 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+#paging span:hover {
+  color: #fe9338;
+
+}
+
+
+#paging .active {
+  background: rgba(254, 147, 56, 0.95);
+  color: #fff;
+  border-color: rgba(254, 147, 56, 0.95);
+}
+
+/* .searchBox input {
+  padding: 6px 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  outline: none;
+  transition: all 0.2s ease;
+} */
+
+.searchBox input:focus {
+  border-color: rgba(254, 147, 56, 0.95);
+  box-shadow: 0 0 4px rgba(108, 92, 231, 0.3);
+}
+.searchBox.qnaSearch {margin: 36px auto;}
+.searchBox.qnaSearch input[type="text"] {border: 2px solid #000;}
+.searchBox.qnaSearch .inputQna {border: 2px solid #000;}
+
+
+
+.qnaList button,
+.product-plus {
+    display: inline-block;
+    padding: 8px 16px;
+    margin: 10px 5px;
+    background: rgba(254, 147, 56, 0.95);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: all 0.2s ease;
+}
+
+.qnaList button:hover,
+.product-plus:hover {
+    background: rgba(254, 147, 56, 1);
+    transform: translateY(-1px);
+    box-shadow: 0 2px 6px rgba(254, 147, 56, 0.3);
+}
+
+.qnaList button:active,
+.product-plus:active {
+    transform: translateY(0);
+}
